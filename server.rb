@@ -8,7 +8,6 @@ class Cafe < ActiveRecord::Base
 end
 
 get '/status' do
-	binding.pry
 	"Up"
 end
 
