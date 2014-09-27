@@ -7,7 +7,14 @@ class Cafe < ActiveRecord::Base
 	self.table_name = 'cafes'
 end
 
-get '/status' do
+get '/api/status' do
 	"Up"
 end
 
+get '/api/cafe/:id' do
+	Cafe.find(params[:id]).to_json
+end
+
+post '/api/cafe' do
+	Cafe.create.from_json(params[:post])
+end
