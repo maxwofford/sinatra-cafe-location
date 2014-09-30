@@ -7,6 +7,7 @@ gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
 gem 'rake'
 gem 'geocoder'
+gem 'haml'
 
 group :development do
  gem 'sqlite3'
