@@ -1,0 +1,36 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %title Hack-Cafe
+    %link{:href => "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "/css/landing-page.css", :rel => "stylesheet"}/
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body
+    .header-background
+      .intro-header
+        .container
+          .row
+            .col-lg-12
+              .intro-message
+                %h1 Hack-Cafe
+                %h3 Let's find a local workspace
+                %hr.intro-divider/
+                %form{:action => "", :method => "POST"}
+                  %input.user-input{"data-autosize-input" => "{ \"space\": 40 }", :placeholder => "What city are you looking to work in?", :type => "text"}/
+    %footer
+      .container
+        .row
+          .col-lg-12
+            %p.copyright.text-muted.small Copyright &#169;Hack-Cafe 2014. All Rights Reserved
+    %script{:src => "https://code.jquery.com/jquery-2.1.1.min.js"}
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
+    %script{:src => "/js/jquery.autosize.input.min.js", :type => "text/javascript"}

@@ -1,6 +1,7 @@
 require 'sinatra'
 require "sinatra/activerecord"
 require 'geocoder'
+require 'haml'
 require './environments'
 require 'pry' if ENV['RACK_ENV'] == 'development'
 
@@ -21,6 +22,11 @@ class Cafe < ActiveRecord::Base
 end
 
 # Routes
+
+get '/' do
+	haml :index
+end
+
 get '/api/status' do
 	"Up"
 end
